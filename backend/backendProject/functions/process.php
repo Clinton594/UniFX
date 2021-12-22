@@ -1,9 +1,7 @@
 <?php
-
 require_once("../controllers/Messenger.php");
 // require_once("../controllers/GeckoExchange.php");
 // require_once("../controllers/NumberFormatter.php");
-
 
 $currency = $paramControl->load_sources("currency");
 $session = object($_SESSION);
@@ -11,9 +9,9 @@ $exclusions = ["account-updates", "getReferrals", "sendLoanRequest"];
 if (!in_array($post->case, $exclusions)) {
 	if (empty($session->user_id)) die("Access Denied");
 }
+
 // $fmn = new NumberFormatter;
 $fmn = new NumberFormatter("en", NumberFormatter::DECIMAL);
-
 
 switch ($post->case) {
 	case "resendPin": //Resend Pin
