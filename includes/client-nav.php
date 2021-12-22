@@ -119,7 +119,7 @@
         </li>
 
         <li>
-          <a href="<?= $uri->site ?>services">Loan</a>
+          <a href="<?= $uri->site ?>free-mining">Free Mining</a>
         </li>
 
         <li>

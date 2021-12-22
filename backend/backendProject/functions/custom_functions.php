@@ -12,8 +12,6 @@ function prepare_new_member($post)
 			$post->return_values = 1;
 
 			// Lower case
-			list($post->first_name, $post->last_name) = explode(" ", $post->full_name);
-			$post->last_name = $post->last_name ?? "";
 			$post->username = ucwords(strtolower($post->username));
 			$post->first_name = ucwords(strtolower($post->first_name));
 			$post->last_name = ucwords(strtolower($post->last_name));
@@ -33,7 +31,6 @@ function site_login($user, $action = 'Login')
 {
 	global $generic;
 	$uri = $generic->getURIdata();
-	require_once(absolute_filepath("{$uri->backend}/controllers/Messenger.php"));
 	$response = new stdClass;
 	$messenger = new Messenger($generic);
 	$company = $generic->company();
