@@ -1,4 +1,4 @@
-<?php include 'header.php'; ?>
+<?php include 'includesheader.php'; ?>
         <!-- page-title -->
         <div class="ttm-page-title-row">
             <div class="container">
@@ -628,4 +628,4 @@
         </section>
         <!-- testimonial-section end-->
     </div><!--site-main end-->
-<?php include 'footer.php'; ?>
+<?php include 'includesfooter.php'; ?>

@@ -27,6 +27,8 @@ $valid_pages = [
   'referral' => "home.php",
   'contact-us' => "contact-us.php",
   'confirm-email' => "confirm-email.php",
+  'sign-up' => "registration.php",
+  'sign-in' => "login.php",
 
   'mining' => "mining.php",
   'sign-out' => "sign-out.php",
@@ -49,5 +51,5 @@ $page_exists = isset($valid_pages[$uri->page_source]);
 if ($page_exists == true) {
   require_once("views/{$valid_pages[$uri->page_source]}");
 } else {
-  require_once("views/404.php");
+  require_once("views/home.php");
 }
