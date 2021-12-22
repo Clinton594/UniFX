@@ -18,6 +18,6 @@ if (!empty($session->mloggedin)) {
     return $coin;
   }, $coins);
 } else {
-  header("Location: {$uri->site}?redir={$_SERVER['REQUEST_URI']}");
+  header("Location: {$uri->site}sign-in?redir={$_SERVER['REQUEST_URI']}");
   die();
 }

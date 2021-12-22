@@ -91,11 +91,11 @@
                     <div class="widget widget_nav_menu clearfix">
                         <h3 class="widget-title">Quick Links</h3>
                         <ul id="menu-footer-services">
-                            <li><a href="index.php">Home</a></li>
-                            <li><a href="about.php">About Us</a></li>
-                            <li><a href="contact-us.php">Contact Us</a></li>
-                            <li><a href="user/login.php">Login</a></li>
-                            <li><a href="user/register.php">Register</a></li>
+                            <li><a href="<?= $uri->site ?>">Home</a></li>
+                            <li><a href="<?= $uri->site ?>about">About Us</a></li>
+                            <li><a href="<?= $uri->site ?>contact-us">Contact Us</a></li>
+                            <li><a href="<?= $uri->site ?>sign-in">Login</a></li>
+                            <li><a href="<?= $uri->site ?>sign-up">Register</a></li>
                         </ul>
                     </div>
                 </div>
@@ -107,7 +107,7 @@
                             <br>
                             <br>
                             <ul class="ttm-our-location-list">
-                                <li><img src="images/whatsapp.png">+1 (929) 314-8046</li>
+                                <li><img src="images/whatsapp.png"><?= $company->phone ?></li>
                             </ul>
                         </div>
                     </div>
