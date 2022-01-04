@@ -85,7 +85,7 @@
                         <div class="post-comment">
                             <h2 class="title form_title">Request Loan</h2>
                             <h6 class="mb-5">send us a request and we will handle the rest. </h6>
-                            <form method="post" class="post_from" action="<?= $url->site ?>actions/contact_us.php" id="contact-form">
+                            <form method="post" id="post_form" class="post_from" action="javascript:;" id="contact-form">
                                 <input type="text" id="msg_name" name="name" placeholder="Name *" required>
                                 <input type="email" id="msg_email" name="email" placeholder="Emaill Address *" required>
                                 <!-- <input type="text" name="subject" placeholder="Subject (Optional)" required> -->
@@ -95,7 +95,7 @@
 
                                 </div>
 
-                                <button class="theme_btn" id="msg_btn" type="button" name="how_it_work"><span class="txt">Send Request</span></button>
+                                <button class="theme_btn submit bg-primary mt-4" id="msg_btn" type="submit" name="how_it_work"><span class="txt">Send Request</span></button>
                             </form>
                         </div>
                     </div>
@@ -117,28 +117,10 @@
     <script>
         active_page('services');
         $(document).ready(function() {
-            $('#msg_btn').click(function(e) {
-                e.preventDefault();
-                var btn = $('#msg_btn');
-                btn.attr('disabled', 'disabled');
-                btn.html('<i class="fa fa-spin fa-spinner"></i>');
-                $.post("<?= $uri->site ?>actions/contact_us.php", {
-                        name: $('#msg_name').val(),
-                        email: $('#msg_email').val(),
-                        msg: $('#msg_text').val(),
-                        how_it_work: 'ok'
-                    },
-                    function(data) {
-                        if (data != 'success') {
-                            $('.msg').html('<p class="text-danger" style="color:red">' + data + '</p>');
-                        } else {
-                            $('.msg').html('<p class="text-success" style="color:green">Your request has been submitted, We will contact you within 24hr</p>');
-                        }
-                        btn.removeAttr('disabled');
-                        btn.html('Send Request');
-                    }
-                );
-            });
+            $('#post_form').submitForm({
+                process_url: `${site.process}custom`,
+                case: "sendLoanRequest"
+            })
         });
     </script>
 </body>
