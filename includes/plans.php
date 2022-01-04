@@ -13,7 +13,7 @@ $plans = array_map(function($plan) use( $_today){
             <div class="heading-title">
                 <h6 class="text-white"><span></span> Pricing</h6>
                 <h2 class="text-white">Our <span class="c-text"> Best </span> Plan</h2>
-                <p class="text-white">GlobalHill Capital Ltd gives you the option to switch investment plans as your financial
+                <p class="text-white">UniqueFX Capital Ltd gives you the option to switch investment plans as your financial
                     circumstances changes. You can change how you invest to suit your needs without additional costs!
                 </p>
             </div>

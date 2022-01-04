@@ -118,8 +118,8 @@
           <a href="<?= $uri->site ?>exchange">Exchange</a>
         </li>
 
-        <li>
-          <a href="<?= $uri->site ?>free-mining">Free Mining</a>
+         <li>
+          <a href="<?= $uri->site ?>mining">Free Mining</a>
         </li>
 
         <li>

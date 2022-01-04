@@ -214,9 +214,12 @@
                                     </div>
                                     <nav id="menu" class="menu">
                                         <ul class="dropdown">
-                                            <li class="active"><a href="index.php">Home</a></li>
+                                            <li class="active"><a href="<?= $uri->site ?>">Home</a></li>
                                             <li><a href="<?= $uri->site ?>about">About</a></li>
                                             <li><a href="<?= $uri->site ?>contact-us">Contact Us</a></li>
+                                            <li><a href="<?= $uri->site ?>plans">Investment Plans</a></li>
+                                            <li><a href="<?= $uri->site ?>services">Loan</a></li>
+                                            <li><a href="<?= $uri->site ?>faq">FAQ</a></li>
                                         </ul>
                                     </nav>
                                 </div><!-- site-navigation end-->

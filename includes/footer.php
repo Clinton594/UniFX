@@ -96,6 +96,7 @@
                             <li><a href="<?= $uri->site ?>contact-us">Contact Us</a></li>
                             <li><a href="<?= $uri->site ?>sign-in">Login</a></li>
                             <li><a href="<?= $uri->site ?>sign-up">Register</a></li>
+                            <li><a href="<?= $uri->site ?>services">Services</a></li>
                         </ul>
                     </div>
                 </div>
@@ -112,9 +113,28 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
+                        <div class="widget flicker_widget clearfix">
+                        <h3>LEGAL DOCs</h3>
+                        <ul>
+                            <li><a href="images/Certificate_of_Incorperation.pdf" target="_about">Certificate of Incorporations</a></li>
+                            <li><a href="images/conflicts.pdf" target="_about">Conflicts</a></li>
+                            <li><a href="images/General_Partner_Guidelines.pdf" target="_about">General Partner Guidelines</a></li>
+                            <li><a href="images/Memo.pdf" target="_about">M.O.U</a></li>
+                            <li><a href="images/Whitepaper.pdf" target="_about">Whitepaper</a></li>
+
+                        </ul>
+                        </div>
+                    </div>
+
             </div>
         </div>
-    </div>
+                
+    <!--        </div>-->
+    <!--    </div>-->
+    <!--</div>-->
+    
     <div class="bottom-footer-text ttm-textcolor-white">
         <div class="container">
             <div class="row copyright">
