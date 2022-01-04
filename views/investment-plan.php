@@ -1,4 +1,8 @@
-<?php include 'includes/header.php'; ?>
+<?php
+$plans = $generic->getFromTable("content", "type=investment, status=1");
+
+include 'includes/header.php';
+?>
 
 <body>
 
@@ -133,166 +137,45 @@
                 <div class="col-md-3 col-sm-2"></div>
             </div>
             <div class="row d-flex justify-content-center">
-                <div class="col-md-4">
-                    <!--ttm-pricing-plan-->
-                    <div class="ttm-pricing-plan box-shadow text-center clearfix">
-                        <div class="ttm-ptablebox-title">
-                            <h3>Basic</h3>
-                        </div>
-                        <div class="ttm-ptablebox-desc">*rates are subject to change</div>
-                        <div class="ttm-ptablebox-content">
-                            <div class="ttm-ptablebox-price-w">
-                                <div class="ttm-ptablebox-cur-symbol-before">$</div>
-                                <div class="ttm-ptablebox-price">100</div>
-                                <div class="ttm-ptablebox-frequency"></div>
+                <?php
+                foreach ($plans as $key => $plan) { ?>
+                    <div class="col-md-4">
+                        <!--ttm-pricing-plan-->
+                        <div class="ttm-pricing-plan box-shadow text-center clearfix">
+                            <div class="ttm-ptablebox-title">
+                                <h3><?= $plan->title ?></h3>
                             </div>
-                            <div class="ttm-ptablebox-features">
-                                <ul class="ttm-feature-lines">
-                                    <li>Minimum: $100</li>
-                                    <li>Maximum: $10000</li>
-                                    <li>ROI: 5.5%</li>
-                                    <li>Free advisory</li>
-                                    <li>24/7 Support</li>
-                                    <li>Advanced Options</li>
-                                    <!-- <li>16 GB Storage</li> -->
-                                    <li>Unlimited Support</li>
-                                </ul>
+                            <div class="ttm-ptablebox-desc">*rates are subject to change</div>
+                            <div class="ttm-ptablebox-content">
+                                <div class="ttm-ptablebox-price-w">
+                                    <div class="ttm-ptablebox-cur-symbol-before">$</div>
+                                    <div class="ttm-ptablebox-price">
+                                        <h3><?= $fmn->format($plan->business) ?></h3>
+                                    </div>
+                                    <div class="ttm-ptablebox-frequency"> <?= $plan->product ?></div>
+                                </div>
+                                <div class="ttm-ptablebox-features">
+                                    <ul class="ttm-feature-lines">
+                                        <li>Minimum: $<?= $plan->business ?>
+                                        </li>
+                                        <li>Maximum: $<?= $plan->label ?></li>
+                                        <li>ROI: <?= $plan->auto ?>% every <?= $plan->view ?></li>
+                                        <li>Free advisory</li>
+                                        <li>24/7 Support</li>
+                                        <li>Advanced Options</li>
+                                        <!-- <li>16 GB Storage</li> -->
+                                        <li>Unlimited Support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="price_btn">
+                                <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey mb-20" href="<?= $uri->site ?>invest">choose plan</a>
                             </div>
                         </div>
-                        <div class="price_btn">
-                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey mb-20" href="user/register.php">choose plan</a>
-                        </div>
+                        <!--ttm-pricing-plan-->
                     </div>
-                    <!--ttm-pricing-plan-->
-                </div>
-                <div class="col-md-4">
-                    <!--ttm-pricing-plan-->
-                    <div class="ttm-pricing-plan box-shadow2 text-center clearfix">
-                        <div class="ttm-ptablebox-title">
-                            <h3>Premium</h3>
-                        </div>
-                        <div class="ttm-ptablebox-desc">*rates are subject to change</div>
-                        <div class="ttm-ptablebox-content">
-                            <div class="ttm-ptablebox-price-w">
-                                <div class="ttm-ptablebox-cur-symbol-before">$</div>
-                                <div class="ttm-ptablebox-price">10,000</div>
-                                <div class="ttm-ptablebox-frequency"></div>
-                            </div>
-                            <div class="ttm-ptablebox-features">
-                                <ul class="ttm-feature-lines">
-                                    <li>Minimum: $10000</li>
-                                    <li>Maximum: $25000</li>
-                                    <li>ROI: 7.5%</li>
-                                    <li>Free advisory</li>
-                                    <li>24/7 Support</li>
-                                    <li>Advanced Options</li>
-                                    <!-- <li>16 GB Storage</li> -->
-                                    <li>Unlimited Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price_btn">
-                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-skincolor mb-20" href="user/register.php">choose plan</a>
-                        </div>
-                    </div>
-                    <!--ttm-pricing-plan-->
-                </div>
-                <div class="col-md-4">
-                    <!--ttm-pricing-plan-->
-                    <div class="ttm-pricing-plan box-shadow text-center clearfix">
-                        <div class="ttm-ptablebox-title">
-                            <h3>Advance</h3>
-                        </div>
-                        <div class="ttm-ptablebox-desc">*rates are subject to change</div>
-                        <div class="ttm-ptablebox-content">
-                            <div class="ttm-ptablebox-price-w">
-                                <div class="ttm-ptablebox-cur-symbol-before">$</div>
-                                <div class="ttm-ptablebox-price">25,000</div>
-                                <div class="ttm-ptablebox-frequency"></div>
-                            </div>
-                            <div class="ttm-ptablebox-features">
-                                <ul class="ttm-feature-lines">
-                                    <li>Minimum: $25000</li>
-                                    <li>Maximum: $50000</li>
-                                    <li>ROI: 10.5%</li>
-                                    <li>Free advisory</li>
-                                    <li>24/7 Support</li>
-                                    <li>Advanced Options</li>
-                                    <!-- <li>16 GB Storage</li> -->
-                                    <li>Unlimited Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price_btn">
-                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey mb-20" href="user/register.php">choose plan</a>
-                        </div>
-                    </div>
-                    <!--ttm-pricing-plan-->
-                </div>
-                <div class="col-md-4">
-                    <!--ttm-pricing-plan-->
-                    <div class="ttm-pricing-plan box-shadow text-center clearfix">
-                        <div class="ttm-ptablebox-title">
-                            <h3>Special</h3>
-                        </div>
-                        <div class="ttm-ptablebox-desc">*rates are subject to change</div>
-                        <div class="ttm-ptablebox-content">
-                            <div class="ttm-ptablebox-price-w">
-                                <div class="ttm-ptablebox-cur-symbol-before">$</div>
-                                <div class="ttm-ptablebox-price">50,000</div>
-                                <div class="ttm-ptablebox-frequency"></div>
-                            </div>
-                            <div class="ttm-ptablebox-features">
-                                <ul class="ttm-feature-lines">
-                                    <li>Minimum: $50000</li>
-                                    <li>Maximum: $100000</li>
-                                    <li>ROI: 12.5%</li>
-                                    <li>Free advisory</li>
-                                    <li>24/7 Support</li>
-                                    <li>Advanced Options</li>
-                                    <!-- <li>16 GB Storage</li> -->
-                                    <li>Unlimited Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price_btn">
-                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey mb-20" href="user/register.php">choose plan</a>
-                        </div>
-                    </div>
-                    <!--ttm-pricing-plan-->
-                </div>
-                <div class="col-md-4">
-                    <!--ttm-pricing-plan-->
-                    <div class="ttm-pricing-plan box-shadow text-center clearfix">
-                        <div class="ttm-ptablebox-title">
-                            <h3>VIP</h3>
-                        </div>
-                        <div class="ttm-ptablebox-desc">*rates are subject to change</div>
-                        <div class="ttm-ptablebox-content">
-                            <div class="ttm-ptablebox-price-w">
-                                <div class="ttm-ptablebox-cur-symbol-before">$</div>
-                                <div class="ttm-ptablebox-price">100,000</div>
-                                <div class="ttm-ptablebox-frequency"></div>
-                            </div>
-                            <div class="ttm-ptablebox-features">
-                                <ul class="ttm-feature-lines">
-                                    <li>Minimum: $100000</li>
-                                    <li>Maximum: Unlimited</li>
-                                    <li>ROI: 15%</li>
-                                    <li>Free advisory</li>
-                                    <li>24/7 Support</li>
-                                    <li>Advanced Options</li>
-                                    <!-- <li>16 GB Storage</li> -->
-                                    <li>Unlimited Support</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="price_btn">
-                            <a class="ttm-btn ttm-btn-size-md ttm-btn-shape-square ttm-btn-bgcolor-darkgrey mb-20" href="user/register.php">choose plan</a>
-                        </div>
-                    </div>
-                    <!--ttm-pricing-plan-->
-                </div>
+                <?php }
+                ?>
             </div>
         </div>
     </section>
