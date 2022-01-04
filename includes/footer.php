@@ -113,9 +113,9 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="col-xs-12 col-sm-12 col-md-6 col-lg-3 widget-area">
-                        <div class="widget flicker_widget clearfix">
+                    <div class="widget flicker_widget clearfix">
                         <h3>LEGAL DOCs</h3>
                         <ul>
                             <li><a href="images/Certificate_of_Incorperation.pdf" target="_about">Certificate of Incorporations</a></li>
@@ -125,34 +125,34 @@
                             <li><a href="images/Whitepaper.pdf" target="_about">Whitepaper</a></li>
 
                         </ul>
-                        </div>
                     </div>
+                </div>
 
             </div>
         </div>
-                
-    <!--        </div>-->
-    <!--    </div>-->
-    <!--</div>-->
-    
-    <div class="bottom-footer-text ttm-textcolor-white">
-        <div class="container">
-            <div class="row copyright">
-                <div class="col-md-12">
-                    <div class="">
-                        <span>Copyright © 2021&nbsp;<a href="#">Uniquefxcapital</a>. All rights reserved.</span>
+
+        <!--        </div>-->
+        <!--    </div>-->
+        <!--</div>-->
+
+        <div class="bottom-footer-text ttm-textcolor-white">
+            <div class="container">
+                <div class="row copyright">
+                    <div class="col-md-12">
+                        <div class="">
+                            <span>Copyright © 2021&nbsp;<a href="#">Uniquefxcapital</a>. All rights reserved.</span>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-12">
-                    <ul id="menu-footer-menu" class="footer-nav-menu">
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
+                    <div class="col-md-12">
+                        <ul id="menu-footer-menu" class="footer-nav-menu">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Services</a></li>
+                            <li><a href="#">Privacy</a></li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 </footer>
 <!--footer end-->
 
@@ -177,6 +177,7 @@
 <script src="<?= $uri->site ?>js/jquery.prettyPhoto.js"></script>
 <script src="<?= $uri->site ?>js/numinate.min6959.js?ver=4.9.3"></script>
 <script src="<?= $uri->site ?>js/main.js"></script>
+<script src="<?= $uri->backend ?>js/controllers.js"></script>
 <script src="<?= $uri->site ?>js/chart.js"></script>
 
 <!-- Revolution Slider -->

@@ -115,7 +115,6 @@
     <?php include 'includes/footer.php'; ?>
 
     <script>
-        active_page('services');
         $(document).ready(function() {
             $('#post_form').submitForm({
                 process_url: `${site.process}custom`,
