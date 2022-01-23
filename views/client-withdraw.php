@@ -51,7 +51,7 @@ $status_value = $paramControl->load_sources("status");
                 <div class="token-balance token-balance-with-icon">
                   <div class="token-balance-text">
                     <h6 class="card-sub-title">Available Balance</h6>
-                    <span class="lead" style="font-size: 1.2em;"> <span><?= $currency ?></span> <?= $fmn->format(round($user->balance)) ?></span>
+                    <span class="lead" style="font-size: 1.2em;"> <span><?= $currency ?></span> <?= $fmn->format(round($user->balance, 2)) ?></span>
                   </div>
                 </div>
                 <?php if ($user->balance > 0) {
@@ -140,8 +140,8 @@ $status_value = $paramControl->load_sources("status");
                         <tr>
                           <td><?= $key + 1 ?></td>
                           <td><?= $plan->name ?></td>
-                          <td><?= $currency . $fmn->format(round($plan->amount + $plan->reinvested)) ?></td>
-                          <td><?= $currency . $fmn->format(round($plan->profit)) ?></td>
+                          <td><?= $currency . $fmn->format(round($plan->amount + $plan->reinvested, 2)) ?></td>
+                          <td><?= $currency . $fmn->format(round($plan->profit, 2)) ?></td>
                           <td>
                             <?php $date = new DateTime($plan->date_created) ?>
                             <?= $date->format("jS M, Y") ?>

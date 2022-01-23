@@ -239,7 +239,7 @@ $approval = $paramControl->load_sources("approval");
                               <tr>
                                 <td><?= $key + 1 ?></td>
                                 <td><?= $plan->name ?></td>
-                                <td><?= $currency . $fmn->format(round($plan->amount + $plan->reinvested)) ?></td>
+                                <td><?= $currency . $fmn->format(round($plan->amount + $plan->reinvested, 2)) ?></td>
                                 <td>
                                   <?php $date = new DateTime($plan->date_created) ?>
                                   <?= $date->format("jS M, Y") ?>
@@ -286,7 +286,7 @@ $approval = $paramControl->load_sources("approval");
                                 <td><?= intval($key) + 1 ?></td>
                                 <td><?= $trans->tx_no ?></td>
                                 <td><?= $trans->description ?></td>
-                                <td><?= $currency . $fmn->format(round($trans->amount)) ?></td>
+                                <td><?= $currency . $fmn->format(round($trans->amount, 2)) ?></td>
                                 <td>
                                   <?php $date = new DateTime($trans->date) ?>
                                   <?= $date->format("jS M, Y") ?>
@@ -325,7 +325,7 @@ $approval = $paramControl->load_sources("approval");
                                 <td><?= intval($key) + 1 ?></td>
                                 <td><?= $trans->tx_no ?></td>
                                 <td><?= $trans->description ?></td>
-                                <td><?= $currency . $fmn->format(round($trans->amount)) ?></td>
+                                <td><?= $currency . $fmn->format(round($trans->amount, 2)) ?></td>
                                 <td>
                                   <?php $date = new DateTime($trans->date) ?>
                                   <?= $date->format("jS M, Y") ?>
@@ -364,7 +364,7 @@ $approval = $paramControl->load_sources("approval");
                                 <td><?= intval($key) + 1 ?></td>
                                 <td><?= $trans->tx_no ?></td>
                                 <td><?= $trans->description ?></td>
-                                <td><?= $currency . $fmn->format(round($trans->amount)) ?></td>
+                                <td><?= $currency . $fmn->format(round($trans->amount, 2)) ?></td>
                                 <td>
                                   <?php $date = new DateTime($trans->date) ?>
                                   <?= $date->format("jS M, Y") ?>

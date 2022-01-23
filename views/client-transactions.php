@@ -48,7 +48,7 @@ $approval = $paramControl->load_sources("approval");
 											<?php if ($trans->tx_type == "exchange") { ?>
 												<?= $fmn->format(round($trans->amount)) . $trans->paid_into ?>
 											<?php } else { ?>
-												<?= $currency . $fmn->format(round($trans->amount)) ?>
+												<?= $currency . $fmn->format(round($trans->amount, 2)) ?>
 											<?php } ?>
 										</td>
 										<td>

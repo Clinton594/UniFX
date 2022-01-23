@@ -118,7 +118,7 @@
           <a href="<?= $uri->site ?>exchange">Exchange</a>
         </li>
 
-         <li>
+        <li>
           <a href="<?= $uri->site ?>mining">Free Mining</a>
         </li>
 
@@ -154,8 +154,8 @@
   <div class="container">
     <div class="d-lg-none row justify-content-between">
       <div class="col col-auto mb-3">
-        <a href="<?= $uri->site ?>invest" class="btn btn-auto d-block d-lg-inline-block btn-sm btn-warning">
-          <span>Make Investment <em class="ml-4 ti ti-arrow-right">
+        <a href="<?= $uri->site ?>fund-account" class="btn btn-auto d-block d-lg-inline-block btn-sm btn-warning">
+          <span>Fund Account <em class="ml-4 ti ti-arrow-right">
 
             </em>
           </span>
